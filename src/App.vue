@@ -1,4 +1,5 @@
 <template>
+  <img :src="x" alt="" />
   <div class="wrapper">
     <el-card class="login-card" shadow="always">
       <el-image class="img-login" :src="loginImg" fit="contain" />

@@ -1,0 +1,81 @@
+/* CSS Reset/Normalize */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Set default font size and family */
+body {
+  font-size: 16px;
+}
+
+/* 移除列表样式（项目符号/序号） */
+ol,
+ul,
+li,
+dl,
+dt,
+dd {
+  list-style: none;
+}
+
+/* 移除引用块缩进 */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* 移除表格间隔 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 移除文本链接下划线 */
+a {
+  text-decoration: none;
+}
+
+/* 移除链接重载样式 */
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline-style: none;
+}
+
+/* 移除输入框高亮边框 */
+input {
+  outline: none;
+}
+
+/*滚动条样式*/
+::-webkit-scrollbar {
+  /* 滚动条整体样式 */
+  width: 8px; /* 高宽分别对应横竖滚动条的尺寸 */
+  height: 8px;
+  border-radius: 5px; /* 设置圆角 */
+}
+
+::-webkit-scrollbar-thumb {
+  /* 滚动条里面小方块 */
+  border-radius: 5px; /* 设置圆角 */
+  background: rgba(112, 111, 111, 0); /* 设置背景颜色为透明 */
+}
+:hover::-webkit-scrollbar-thumb {
+  background: rgba(112, 111, 111, 0.3); /* 当鼠标移入时，显示背景颜色 */
+}
+::-webkit-scrollbar-track {
+  /* 滚动条里面轨道 */
+  border-radius: 5px; /* 设置圆角 */
+  background: rgba(1, 56, 99, 0); /* 设置背景颜色为透明 */
+}

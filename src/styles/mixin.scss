@@ -1,0 +1,56 @@
+/* 水平排列的 Flex 布局 */
+@mixin flex($justify: space-between) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+
+/* 垂直排列的 Flex 布局 */
+@mixin flexDirection($justify: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: $justify;
+}
+
+/* 重置最后一个子元素的外边距为 0 */
+@mixin lastChildGapReset {
+  &:last-child {
+    margin: 0;
+  }
+}
+
+/* 超出一行省略 */
+@mixin textEllipsis() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* 细边框效果 */
+@mixin thinBorder($color) {
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    border-radius: inherit;
+    border: 1px solid $color;
+    transform-origin: 0 0;
+    transform: scale(0.5);
+    pointer-events: none;
+  }
+}
+
+/* 输入框自动填充背景色 */
+@mixin autofill($color) {
+  :deep(input) {
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px $color inset !important;
+    }
+  }
+}

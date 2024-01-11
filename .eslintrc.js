@@ -10,11 +10,12 @@ module.exports = {
   // 指定一个解析器
   parser: 'vue-eslint-parser', // 专为解析 Vue 单文件组件而设计的解析器。
   parserOptions: {
+    // parser: '@babel/eslint-parser', // 使用 Babel 解析器来解析代码。
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
   extends: ['eslint:recommended', 'airbnb-base', 'plugin:vue/vue3-recommended', 'plugin:prettier/recommended'],
-  plugins: ['vue', 'vue-scoped-css', 'import', 'prettier'],
+  plugins: ['html', 'vue', 'vue-scoped-css', 'import', 'prettier'],
 
   settings: {
     // 解析和定位模块导入语句中的模块路径
@@ -47,6 +48,7 @@ module.exports = {
     'vue/comment-directive': 'off', // 支持在模版中使用 eslint-disable-next-line 等注释
     'vue/no-multiple-template-root': 'off', // 关闭多根节点检测
     'vue/multi-word-component-names': 'off', // 关闭单文件组件名必须多个单词的限制
+    'vue/attribute-hyphenation': 'error', // 自定义组件-属性名称-连接符
 
     /* css */
     'vue-scoped-css/require-scoped': 'error', // 确保 scoped 样式的正确使用

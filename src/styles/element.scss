@@ -1,0 +1,5 @@
+.el-popper {
+  &:has(.custom-popper) {
+    border: none;
+  }
+}
