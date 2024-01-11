@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "noEmit": true, // 禁止输出编译结果
+    "allowJs": true, // 允许编译 JavaScript 文件
+    "checkJs": false, // 关闭对 JavaScript 文件的类型检查
+    "noImplicitAny": false, // 允许隐式的 any 类型
+    "strict": false // 关闭所有严格的类型检查选项
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
