@@ -9,11 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@babel/plugin-transform-optional-chaining": "^7.23.4",
     "vue": "^3.3.11"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
     "@babel/eslint-parser": "^7.23.3",
+    "@babel/preset-env": "^7.23.8",
     "@vitejs/plugin-vue": "^4.5.2",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
