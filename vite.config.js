@@ -1,6 +1,8 @@
 import path from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import viteCompression from 'vite-plugin-compression2'
+import visualizer from 'rollup-plugin-visualizer'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
@@ -8,7 +10,22 @@ export default ({ mode }) => {
 
   return defineConfig({
     base: env.VITE_APP_PUBLIC_PATH, // 项目在服务器上的基本路径
-    plugins: [vue()],
+    plugins: [
+      vue(),
+      // 压缩
+      viteCompression({
+        algorithm: 'gzip', // 压缩算法
+        threshold: 10240, // 体积大于阈值，则进行压缩，单位为b
+        deleteOriginFile: false, // 压缩后是否删除源文件
+        exclude: [/\.(br)$/, /\.(gz)$/]
+      }),
+      // 打包分析
+      visualizer({
+        open: true, // 构建完成后自动打开报告页面
+        gzipSize: true, // 显示 Gzip 压缩后的包大小
+        brotliSize: true // 显示 Brotli 压缩后的包大小
+      })
+    ],
 
     resolve: {
       alias: {

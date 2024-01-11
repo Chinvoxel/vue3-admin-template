@@ -10,7 +10,17 @@
   },
   "dependencies": {
     "@babel/plugin-transform-optional-chaining": "^7.23.4",
-    "vue": "^3.3.11"
+    "@element-plus/icons-vue": "^2.3.1",
+    "@vueuse/core": "^10.7.1",
+    "axios": "^1.6.5",
+    "crypto-js": "^4.2.0",
+    "echarts": "^5.4.3",
+    "element-plus": "^2.5.0",
+    "js-base64": "^3.7.5",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.1.7",
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
@@ -28,9 +38,11 @@
     "eslint-plugin-vue": "^9.20.0",
     "eslint-plugin-vue-scoped-css": "^2.6.1",
     "prettier": "^3.1.1",
+    "rollup-plugin-visualizer": "^5.12.0",
     "sass": "^1.69.7",
     "typescript": "^5.3.3",
     "vite": "^5.0.8",
+    "vite-plugin-compression2": "^0.11.0",
     "vue-eslint-parser": "^9.4.0"
   }
 }
