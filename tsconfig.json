@@ -11,8 +11,15 @@
     "checkJs": false, // 关闭对 JavaScript 文件的类型检查
     "noImplicitAny": false, // 允许隐式的 any 类型
     "strict": false, // 关闭所有严格的类型检查选项
-    "lib": ["esnext", "dom"]
+    "sourceMap": true,
+    "target": "esnext",
+    "moduleResolution": "node",
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client", "element-plus/global"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*.js", "src/**/*.vue", "src/**.ts", "src/**/*.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

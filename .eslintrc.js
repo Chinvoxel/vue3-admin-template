@@ -10,11 +10,17 @@ module.exports = {
   // 指定一个解析器
   parser: 'vue-eslint-parser', // 专为解析 Vue 单文件组件而设计的解析器。
   parserOptions: {
-    // parser: '@babel/eslint-parser', // 使用 Babel 解析器来解析代码。
+    parser: '@typescript-eslint/parser',
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  extends: ['eslint:recommended', 'airbnb-base', 'plugin:vue/vue3-recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'eslint:recommended',
+    'airbnb-base',
+    'plugin:vue/vue3-recommended',
+    'plugin:prettier/recommended',
+    './.eslintrc-auto-import.json' // 自动导入api 全局化
+  ],
   plugins: ['html', 'vue', 'vue-scoped-css', 'import', 'prettier'],
 
   settings: {
@@ -43,7 +49,7 @@ module.exports = {
   rules: {
     /* vue */
     'vue/no-undef-properties': 'error', // 禁止使用未定义的属性
-    'vue/no-undef-components': 'error', // 禁止使用未定义的组件
+    // 'vue/no-undef-components': 'error', // 禁止使用未定义的组件
     'vue/block-tag-newline': 'error', // 在开始和结束块级标记之后和之前强制换行
     'vue/comment-directive': 'off', // 支持在模版中使用 eslint-disable-next-line 等注释
     'vue/no-multiple-template-root': 'off', // 关闭多根节点检测
@@ -81,6 +87,7 @@ module.exports = {
       {
         js: 'never',
         json: 'never',
+        cjs: 'never',
         vue: 'always',
         sass: 'always'
       }
