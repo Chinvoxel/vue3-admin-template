@@ -9,6 +9,8 @@ export default app => {
 
     if (process.env.NODE_ENV === 'development') {
       window.console.group('>>>>>> 错误信息 >>>>>>')
+      console.log('info: ', info)
+
       window.console.error(info)
       window.console.groupEnd()
       window.console.group('>>>>>> Vue 实例 >>>>>>')

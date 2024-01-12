@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@imgs/*": ["src/assets/images/*"],
+      "@comps/*": ["src/components/*"]
+    },
+    "lib": ["esnext", "dom"],
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "types": ["vite/client", "element-plus/global"] //
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

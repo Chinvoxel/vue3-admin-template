@@ -10,7 +10,7 @@ module.exports = {
   // 指定一个解析器
   parser: 'vue-eslint-parser', // 专为解析 Vue 单文件组件而设计的解析器。
   parserOptions: {
-    // parser: '@babel/eslint-parser', // 使用 Babel 解析器来解析代码。
+    parser: '@babel/eslint-parser',
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
@@ -43,12 +43,12 @@ module.exports = {
   rules: {
     /* vue */
     'vue/no-undef-properties': 'error', // 禁止使用未定义的属性
-    'vue/no-undef-components': 'error', // 禁止使用未定义的组件
     'vue/block-tag-newline': 'error', // 在开始和结束块级标记之后和之前强制换行
     'vue/comment-directive': 'off', // 支持在模版中使用 eslint-disable-next-line 等注释
     'vue/no-multiple-template-root': 'off', // 关闭多根节点检测
     'vue/multi-word-component-names': 'off', // 关闭单文件组件名必须多个单词的限制
     'vue/attribute-hyphenation': 'error', // 自定义组件-属性名称-连接符
+    'vue/attributes-order': 'off',
 
     /* css */
     'vue-scoped-css/require-scoped': 'error', // 确保 scoped 样式的正确使用

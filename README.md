@@ -1,7 +1,14 @@
-# Vue 3 + Vite
+## TODO
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+1. vite-plugin-mock 提供本地和生产模拟服务。
+2. svg-icon 引入svg,element-plus组件库icon太少 （vite-plugin-purge-icons）
+3. unocss 考虑引入
 
-## Recommended IDE Setup
+## Features
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+1. 支持 Vite 5 + Vue 3 + JS
+2. UI 框架: Element Plus 2.x
+3. 状态管理: Pinia
+4. 国际化: vue-i18n-next
+
+## Environment Support

@@ -1,4 +1,4 @@
-const modules = import.meta.globEager('./*.js')
+const modules = import.meta.glob('./*.js', { eager: true })
 
 // 遍历当前文件夹下所有枚举文件
 const enums = Object.keys(modules).reduce((acc, path) => {

@@ -3,6 +3,7 @@ import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import viteCompression from 'vite-plugin-compression2'
 import visualizer from 'rollup-plugin-visualizer'
+import ViteRestart from 'vite-plugin-restart'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
@@ -12,6 +13,12 @@ export default ({ mode }) => {
     base: env.VITE_APP_PUBLIC_PATH, // 项目在服务器上的基本路径
     plugins: [
       vue(),
+      // 修改这些文件会重启项目
+      ViteRestart({
+        cache: false,
+        restart: ['./vite.config.js', './babel.config.js', './jsconfig.json']
+      }),
+
       // 压缩
       viteCompression({
         algorithm: 'gzip', // 压缩算法
@@ -19,6 +26,7 @@ export default ({ mode }) => {
         deleteOriginFile: false, // 压缩后是否删除源文件
         exclude: [/\.(br)$/, /\.(gz)$/]
       }),
+
       // 打包分析
       visualizer({
         open: true, // 构建完成后自动打开报告页面
@@ -33,7 +41,18 @@ export default ({ mode }) => {
         '@imgs': path.resolve(__dirname, 'src/assets/images'),
         '@comps': path.resolve(__dirname, 'src/components')
       },
-      extensions: ['.js', '.json', '.jsx', '.ts', '.vue'] // 文件后缀拓展
+      extensions: ['.js', '.json', '.jsx', '.ts', '.mjs', '.vue'] // 文件后缀拓展
+    },
+
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+          @use '${path.resolve(__dirname, 'src/styles/mixin.scss')}' as *;
+          @use "${path.resolve(__dirname, 'src/styles/variables.scss')}" as *;
+          `
+        }
+      }
     },
 
     // 打包
@@ -60,6 +79,10 @@ export default ({ mode }) => {
           }
         }
       }
+    },
+
+    esbuild: {
+      drop: ['debugger']
     },
 
     // 本地服务
