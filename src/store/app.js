@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import { Storage } from '@/utils/storage'
 import { getLanguage } from '@/i18n'
+import { Storage } from '@/utils/storage'
 
 export const useAppStore = defineStore({
   id: 'app',

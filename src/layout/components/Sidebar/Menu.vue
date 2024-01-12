@@ -15,7 +15,7 @@
         <!-- 渲染单个子路由 -->
         <el-menu-item :index="route.path" :key="route.path">
           <component :is="route.meta.icon" class="menu-icon"></component>
-          <template #title>{{ generateTitle(route.meta.title) }}</template>
+          <template #title>{{ translateText(route.meta.title) }}</template>
         </el-menu-item>
       </template>
 
@@ -24,7 +24,7 @@
         <el-sub-menu :index="route.path" :key="route.path">
           <template #title>
             <component :is="route.meta.icon" class="menu-icon"></component>
-            <span>{{ generateTitle(route.meta.title) }}</span>
+            <span>{{ translateText(route.meta.title) }}</span>
           </template>
           <el-menu-item
             v-for="childRoute in route.children"
@@ -33,7 +33,7 @@
             :key="childRoute.path"
           >
             <component :is="childRoute.meta.icon" class="menu-icon"></component>
-            <template #title>{{ generateTitle(childRoute.meta.title) }}</template>
+            <template #title>{{ translateText(childRoute.meta.title) }}</template>
           </el-menu-item>
         </el-sub-menu>
       </template>
@@ -45,7 +45,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import currentRoutes from '@/router/routes'
-import { generateTitle } from '@/utils/i18n'
+import { translateText } from '@/utils/i18n'
 
 defineProps({
   collapse: {
@@ -66,7 +66,7 @@ const formatRoutes = (routes, parentPath = '') => {
     .map(route => {
       const formattedRoute = {
         ...route,
-        path: resolvePath(parentPath, route.path),
+        path: route.redirect ? route.redirect : resolvePath(parentPath, route.path),
         children: route.children ? formatRoutes(route.children, route.path) : null
       }
 

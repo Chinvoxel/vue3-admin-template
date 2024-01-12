@@ -21,7 +21,7 @@ const constantRoutes = [
         path: 'home/index',
         name: 'Home',
         meta: {
-          title: 'home',
+          title: 'route.home',
           icon: 'house'
         },
         component: Home
@@ -34,7 +34,7 @@ const constantRoutes = [
     props: true,
     hidden: true,
     meta: {
-      title: 'login'
+      title: 'route.login'
     },
     component: Login
   },
@@ -57,7 +57,7 @@ const constantRoutes = [
         path: 'index',
         name: 'test',
         meta: {
-          title: 'test',
+          title: 'route.test',
           icon: 'guide',
           noCache: true
         },
@@ -70,7 +70,7 @@ const constantRoutes = [
     component: Layout,
     redirect: '/user/profile',
     meta: {
-      title: 'user',
+      title: 'route.user',
       icon: 'user'
     },
     children: [
@@ -78,7 +78,7 @@ const constantRoutes = [
         path: 'profile',
         name: 'Profile',
         meta: {
-          title: 'profile'
+          title: 'route.profile'
         },
         component: () => import('@/views/test/index.vue')
       },
@@ -86,7 +86,7 @@ const constantRoutes = [
         path: 'settings',
         name: 'Settings',
         meta: {
-          title: 'accountSetting'
+          title: 'route.accountSetting'
         },
         component: () => import('@/views/test/index.vue')
       }

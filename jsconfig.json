@@ -11,7 +11,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "types": ["vite/client", "element-plus/global"] //
+    "types": ["element-plus/global"] //"vite/client",
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

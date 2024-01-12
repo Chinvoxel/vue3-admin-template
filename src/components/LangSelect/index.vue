@@ -23,8 +23,11 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRoute } from 'vue-router'
 import { useAppStore } from '@/store/app'
+import { setTitle } from '@/utils/i18n'
 
+const route = useRoute()
 const i18n = useI18n()
 const store = useAppStore()
 
@@ -34,6 +37,7 @@ const language = computed(() => store.language)
 const handleSetLanguage = lang => {
   i18n.locale.value = lang
   store.SET_LANGUAGE(lang)
+  setTitle(route) // 设置页面标题
 }
 </script>
 

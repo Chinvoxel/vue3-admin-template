@@ -2,7 +2,7 @@
   <Transition name="slide-fade" mode="out-in">
     <div class="sidebar-logo-container" :key="collapse ? 'collapse' : 'expand'">
       <img class="sidebar-logo" :src="website.logo" />
-      <span v-if="!collapse" class="sidebar-title">{{ website.title }}</span>
+      <span v-if="!collapse" class="sidebar-title">{{ $t(website.title) }}</span>
     </div>
   </Transition>
 </template>
