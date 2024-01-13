@@ -21,7 +21,7 @@
 
       <!-- 渲染包含多子路由的菜单 -->
       <template v-else>
-        <el-sub-menu :index="route.path" :key="route.path">
+        <el-sub-menu :index="route.path" :key="route.path" popper-class="custom-popper">
           <template #title>
             <component :is="route.meta.icon" class="menu-icon"></component>
             <span>{{ translateText(route.meta.title) }}</span>
@@ -39,6 +39,8 @@
       </template>
     </template>
   </el-menu>
+
+  <div></div>
 </template>
 
 <script setup>

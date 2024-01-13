@@ -6,9 +6,10 @@
 
 ## Features
 
-1. 支持 Vite 5 + Vue 3 + JS
+1. 支持 Vite 4 + Vue 3 + JS
 2. UI 框架: Element Plus 2.x
 3. 状态管理: Pinia
 4. 国际化: vue-i18n-next
+5. vue hooks集合 (https://www.vueusejs.com/)
 
 ## Environment Support

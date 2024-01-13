@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import viteCompression from 'vite-plugin-compression2'
 import visualizer from 'rollup-plugin-visualizer'
 import ViteRestart from 'vite-plugin-restart'
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
@@ -17,6 +18,10 @@ export default ({ mode }) => {
       ViteRestart({
         cache: false,
         restart: ['./vite.config.js', './babel.config.js', './jsconfig.json']
+      }),
+
+      VueI18nPlugin({
+        include: [path.resolve(__dirname, './src/language/**')]
       }),
 
       // 压缩
@@ -41,7 +46,7 @@ export default ({ mode }) => {
         '@imgs': path.resolve(__dirname, 'src/assets/images'),
         '@comps': path.resolve(__dirname, 'src/components')
       },
-      extensions: ['.js', '.json', '.jsx', '.ts', '.mjs', '.vue'] // 文件后缀拓展
+      extensions: ['.js', '.json', '.vue', '.jsx', '.ts', '.cjs', '.mjs'] // 文件后缀拓展
     },
 
     css: {

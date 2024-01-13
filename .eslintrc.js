@@ -15,14 +15,14 @@ module.exports = {
     sourceType: 'module'
   },
   extends: ['eslint:recommended', 'airbnb-base', 'plugin:vue/vue3-recommended', 'plugin:prettier/recommended'],
-  plugins: ['html', 'vue', 'vue-scoped-css', 'import', 'prettier'],
+  plugins: ['html', 'vue', 'vue-scoped-css', 'import'],
 
   settings: {
     // 解析和定位模块导入语句中的模块路径
     'import/resolver': {
       node: {
         moduleDirectory: ['node_modules', 'src'],
-        extensions: ['.js', '.jsx', '.json', '.vue']
+        extensions: ['.js', '.json', '.vue', '.jsx', '.ts', '.cjs', '.mjs']
       },
       alias: {
         map: [
@@ -30,7 +30,7 @@ module.exports = {
           ['@imgs', './src/assets/images'],
           ['@comps', './src/components']
         ],
-        extensions: ['.js', '.json', '.jsx', '.vue']
+        extensions: ['.js', '.json', '.vue', '.jsx', '.ts', '.cjs', '.mjs']
       }
     }
   },
@@ -59,6 +59,7 @@ module.exports = {
     'no-restricted-syntax': 'off', // 关闭禁用for-in for-of的规则
     'no-param-reassign': ['error', { props: false }], // 禁止直接赋值函数的入参
     'no-underscore-dangle': 'off', // 关闭不允许下划线做前缀
+    'no-unused-expressions': ['error', { allowShortCircuit: true }], // 允许短路逻辑运算符如 && 和 ||
     'prefer-destructuring': 'off', // 对象、数组不强制解构
 
     /* another */
@@ -81,6 +82,7 @@ module.exports = {
       {
         js: 'never',
         json: 'never',
+        cjs: 'never',
         vue: 'always',
         sass: 'always'
       }

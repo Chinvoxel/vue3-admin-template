@@ -4,7 +4,8 @@
 
 <script setup>
 import * as echarts from 'echarts'
-import { onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
+import { ref, toRefs, watch, computed, onMounted, onUnmounted, shallowRef } from 'vue'
+import { usePreferredDark } from '@vueuse/core'
 
 const props = defineProps({
   options: {
@@ -15,9 +16,20 @@ const props = defineProps({
 })
 
 const { options } = toRefs(props)
+const emit = defineEmits(['updateAxisPointer', 'update:theme'])
 
 const container = ref(null)
-const chartRef = ref(null)
+const chartRef = shallowRef(null)
+
+const isDark = usePreferredDark() // 获取用户的浏览器偏好主题
+const theme = computed(() => (isDark.value ? 'dark' : 'light'))
+watch(
+  isDark,
+  newVal => {
+    emit('update:theme', newVal)
+  },
+  { immediate: true }
+)
 
 watch(
   options,
@@ -26,21 +38,29 @@ watch(
       chartRef.value.setOption(newOption)
     }
   },
-  { deep: true }
+  { immediate: false, deep: true }
 )
 
 onMounted(() => {
-  chartRef.value = echarts.init(container.value, 'dark')
+  chartRef.value = echarts.init(container.value, theme.value)
   chartRef.value.setOption(options.value)
 
+  // 监听图表的轴指针事件
+  chartRef.value.on('updateAxisPointer', event => {
+    emit('updateAxisPointer', {
+      chart: chartRef.value,
+      event
+    })
+  })
+  // 监听浏览器窗口大小变化
   window.addEventListener('resize', () => {
     chartRef.value.resize()
   })
 })
 
 onUnmounted(() => {
-  chartRef.value.dispose()
   window.removeEventListener('resize', () => {})
+  chartRef.value.dispose()
 })
 </script>
 

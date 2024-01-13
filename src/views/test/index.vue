@@ -1,5 +1,6 @@
 <template>
-  <div></div>
+  <el-affix></el-affix>
+  <div>你好</div>
 </template>
 
 <script setup></script>

@@ -2,8 +2,9 @@ import request from '@/request'
 
 /**
  * @description 通过手机号进行登录
- * @param {String} phone 手机号
- * @param {String} password 密码
+ * @param {Object} options - 登录选项
+ * @param {string} options.phone - 手机号
+ * @param {string} options.password - 密码
  */
 export function loginByPhone({ phone, password }) {
   return request({

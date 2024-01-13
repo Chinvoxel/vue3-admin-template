@@ -23,7 +23,7 @@ export const translateText = key => {
 /**
  * 设置页面标题。
  *
- * @param {object} route - 路由对象。
+ * @param {object} route - 路由对象
  */
 export const setTitle = route => {
   const { title } = route.meta
