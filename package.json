@@ -21,7 +21,6 @@
     "js-base64": "^3.7.5",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
-    "volar-service-vetur": "^0.0.17",
     "vue": "^3.3.11",
     "vue-i18n": "^9.9.0",
     "vue-router": "^4.2.5"

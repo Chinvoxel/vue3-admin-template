@@ -1,36 +1,39 @@
+// {
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "paths": {
+//       "@/*": ["src/*"],
+//       "@imgs/*": ["src/assets/images/*"],
+//       "@comps/*": ["src/components/*"]
+//     },
+//     "target": "ES2021",
+//     "module": "ESNext",
+//     "lib": ["ES2021", "dom"],
+//     "skipLibCheck": true,
+//     // 启用所有严格类型检查选项
+//     "strict": false,
+//     "sourceMap": true,
+//     // 允许编译 JavaScript 文件
+//     "allowJs": true,
+//     // 启用对 JavaScript 代码的严格类型检查
+//     "checkJs": false,
+//     // 禁止输出编译结果
+//     "noEmit": true,
+//     // 禁用对未明确类型定义的变量的自动类型推断
+//     "noImplicitAny": false,
+//     "jsx": "preserve",
+//     "moduleResolution": "Bundler",
+//     "resolveJsonModule": true,
+//     "esModuleInterop": true,
+//     "types": ["vite/client", "element-plus/global"]
+//   },
+//   "include": ["./src/*"],
+//   "exclude": ["node_modules", "dist"]
+// }
+
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "@imgs/*": ["src/assets/images/*"],
-      "@comps/*": ["src/components/*"]
-    },
-    "target": "ESNext",
-    "module": "ESNext",
-    // 禁止输出编译结果
-    "noEmit": true,
-    // 允许编译 JavaScript 文件
     "allowJs": true,
-    // 启用所有严格类型检查选项
-    "strict": false,
-    // 启用对 JavaScript 代码的严格类型检查
-    "checkJs": false,
-    // 禁用对未明确类型定义的变量的自动类型推断
-    "noImplicitAny": false,
-    // 使用的库
-    "lib": ["ESNext", "dom"],
-    // 模块解析策略
-    "moduleResolution": "node",
-    // 允许解析 `.json` 文件作为 JavaScript 模块
-    "resolveJsonModule": true,
-    // 允许使用 `define` 属性定义类字段
-    "useDefineForClassFields": true,
-    // 允许 ES 模块与 CommonJS 模块之间的交互
-    "esModuleInterop": true,
-    // 类型定义的来源
-    "types": ["vite/client", "element-plus/global", "@intlify/unplugin-vue-i18n/messages"]
-  },
-  "include": ["src/**/*.js", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./vite.config.js"],
-  "exclude": ["node_modules", "dist"]
+    "types": ["element-plus/global"]
+  }
 }

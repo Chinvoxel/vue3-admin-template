@@ -29,7 +29,11 @@ export default ({ mode }) => {
         algorithm: 'gzip', // 压缩算法
         threshold: 10240, // 体积大于阈值，则进行压缩，单位为b
         deleteOriginFile: false, // 压缩后是否删除源文件
-        exclude: [/\.(br)$/, /\.(gz)$/]
+        exclude: [
+          /\.(br)$/, // 排除已经使用 Brotli 压缩的文件
+          /\.(gz)$/, // 排除已经使用 Gzip 压缩的文件
+          /\.(png|jpe?g|gif|svg|ico)$/i // 排除图片格式文件
+        ]
       }),
 
       // 打包分析

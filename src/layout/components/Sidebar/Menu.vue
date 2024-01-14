@@ -107,6 +107,12 @@ const resolvePath = (basePath, routePath) => {
       margin-right: 16px;
       color: $color-gray;
     }
+    &.is-active {
+      color: $color-blue;
+      .menu-icon {
+        color: $color-blue;
+      }
+    }
   }
 }
 .custom-menu-container {
@@ -138,15 +144,14 @@ const resolvePath = (basePath, routePath) => {
       &:hover {
         background-color: $menuHover !important;
       }
+      &.is-active {
+        color: $color-blue;
+        .menu-icon {
+          color: $color-blue;
+        }
+      }
       .el-menu-tooltip__trigger {
         padding: inherit;
-      }
-    }
-
-    .el-menu-item.is-active {
-      color: $color-blue;
-      .menu-icon {
-        color: $color-blue;
       }
     }
 

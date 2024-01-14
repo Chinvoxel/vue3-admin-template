@@ -1,5 +1,5 @@
-const vetur = require('volar-service-vetur')
+// const vetur = require('volar-service-vetur')
 
-module.exports = {
-  services: [vetur.create()]
-}
+// module.exports = {
+//   services: [vetur.create()]
+// }
