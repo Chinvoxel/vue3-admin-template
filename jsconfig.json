@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@imgs/*": ["src/assets/images/*"],
+      "@comps/*": ["src/components/*"]
+    },
+    "types": ["vite/client", "element-plus/global"]
+  }
+}
