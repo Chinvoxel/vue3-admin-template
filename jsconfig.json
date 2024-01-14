@@ -6,6 +6,14 @@
       "@imgs/*": ["src/assets/images/*"],
       "@comps/*": ["src/components/*"]
     },
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node", // 设置模块解析为node
+    "resolveJsonModule": true, // 允许解析JSON模块
+    "esModuleInterop": true, // 允许ES模块与CJS模块之间的交互
+    "lib": ["esnext", "dom"],
     "types": ["vite/client", "element-plus/global"]
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

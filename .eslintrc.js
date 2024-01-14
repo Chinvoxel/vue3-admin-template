@@ -10,7 +10,7 @@ module.exports = {
   // 指定一个解析器
   parser: 'vue-eslint-parser', // 专为解析 Vue 单文件组件而设计的解析器。
   parserOptions: {
-    // parser: '@babel/eslint-parser',
+    parser: '@babel/eslint-parser',
     ecmaVersion: 'latest',
     sourceType: 'module'
   },

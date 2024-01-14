@@ -39,8 +39,6 @@
       </template>
     </template>
   </el-menu>
-
-  <div></div>
 </template>
 
 <script setup>
