@@ -1,0 +1,10 @@
+.vscode/*
+dist/*
+assets/*
+node_modules/*
+**/index.html
+**/index.*.html
+**/assets/*.html
+
+# 忽略 rollup-plugin-visualizer 生成的包大小分析报告
+/stats.html
