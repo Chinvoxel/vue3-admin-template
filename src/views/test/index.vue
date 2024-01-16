@@ -1,5 +1,5 @@
 <template>
-  <el-affix></el-affix>
+  <el-affix :hello-world="11"></el-affix>
   <div>你好</div>
 </template>
 

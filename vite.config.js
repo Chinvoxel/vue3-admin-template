@@ -66,6 +66,7 @@ export default ({ mode }) => {
 
     // 打包
     build: {
+      sourcemap: true,
       chunkSizeWarningLimit: 1600, // 触发警告的 chunk 大小
       rollupOptions: {
         external: [], // 指定外部依赖模块
