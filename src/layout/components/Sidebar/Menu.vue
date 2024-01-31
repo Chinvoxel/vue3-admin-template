@@ -70,7 +70,7 @@ const formatRoutes = (routes, parentPath = '') => {
         children: route.children ? formatRoutes(route.children, route.path) : null
       }
 
-      if (formattedRoute.children && formattedRoute.children.length === 1) {
+      if (formattedRoute?.children?.length === 1 && !formattedRoute?.meta?.title) {
         // 如果只有一个子路由，将子路由的属性合并到父级路由
         const childRoute = formattedRoute.children[0]
         formattedRoute.meta = {
