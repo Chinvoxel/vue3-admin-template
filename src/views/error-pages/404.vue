@@ -9,12 +9,14 @@
 <style lang="scss" scoped>
 .wrapper {
   @include flexDirection(center);
+
   width: 100vw;
   height: 100vh;
+  color: #ffffff;
   font-size: 70px;
   line-height: 1.3;
-  color: #ffffff;
   background: #111112;
+
   .not-found {
     max-width: 550px;
     letter-spacing: 3px;
@@ -24,10 +26,10 @@
 
 // 打字机效果
 .typed-out {
-  overflow: hidden;
-  border-right: 0.15em solid orange;
-  white-space: nowrap;
   width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid orange;
   animation:
     typing 4s steps(20, end) forwards,
     blink 0.8s infinite;
@@ -36,6 +38,7 @@
   from {
     width: 0;
   }
+
   to {
     width: 550px;
   }
@@ -45,6 +48,7 @@
   from {
     border-color: transparent;
   }
+
   to {
     border-color: #ffffff;
   }

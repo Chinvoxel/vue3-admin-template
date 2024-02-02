@@ -22,26 +22,26 @@
 
 /* 超出一行省略 */
 @mixin textEllipsis() {
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 /* 细边框效果 */
 @mixin thinBorder($color) {
   &::before,
   &::after {
-    content: '';
     position: absolute;
-    box-sizing: border-box;
-    left: 0;
     top: 0;
+    left: 0;
+    box-sizing: border-box;
     width: 200%;
     height: 200%;
-    border-radius: inherit;
     border: 1px solid $color;
-    transform-origin: 0 0;
+    border-radius: inherit;
     transform: scale(0.5);
+    transform-origin: 0 0;
+    content: '';
     pointer-events: none;
   }
 }
@@ -50,7 +50,7 @@
 @mixin autofill($color) {
   :deep(input) {
     &:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0px 1000px $color inset !important;
+      box-shadow: 0 0 0 1000px $color inset !important;
     }
   }
 }

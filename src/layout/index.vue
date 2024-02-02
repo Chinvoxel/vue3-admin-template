@@ -22,20 +22,18 @@ const sideBarWidth = computed(() => (Getter.collapsed ? '54px' : '210px'))
 <style lang="scss" scoped>
 .app-container {
   .sidebar-container {
-    z-index: 1001;
     position: fixed;
     top: 0;
-    left: 0;
     bottom: 0;
+    left: 0;
+    z-index: 1001;
     width: v-bind(sideBarWidth);
     transition: width 0.28s;
   }
+
   .main-container {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: v-bind(sideBarWidth);
+    inset: 0 0 0 v-bind(sideBarWidth);
     transition: left 0.28s;
   }
 }

@@ -22,6 +22,7 @@
   height: calc(100vh - 50px);
   padding: 20px;
   overflow: hidden;
+
   .container {
     width: 100%;
     height: 100%;

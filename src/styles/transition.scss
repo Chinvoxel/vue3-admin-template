@@ -5,13 +5,13 @@
 }
 
 .page-enter {
-  opacity: 0;
   transform: translateX(-30px);
+  opacity: 0;
 }
 
 .page-leave-to {
-  opacity: 0;
   transform: translateX(30px);
+  opacity: 0;
 }
 
 /* 面包屑过渡效果 */
@@ -22,8 +22,8 @@
 
 .breadcrumb-enter,
 .breadcrumb-leave-active {
-  opacity: 0;
   transform: translateX(20px);
+  opacity: 0;
 }
 
 .breadcrumb-move {

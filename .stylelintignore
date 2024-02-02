@@ -1,0 +1,18 @@
+dist/*
+node_modules/*
+packages/*
+public/*
+
+src/assets/images/*
+src/api/*
+
+# 其他类型文件
+*.js
+*.jpg
+*.png
+*.eot
+*.ttf
+*.woff
+*.json
+
+

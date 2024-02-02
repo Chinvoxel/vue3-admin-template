@@ -58,7 +58,7 @@ input {
   outline: none;
 }
 
-/*滚动条样式*/
+/* 滚动条样式 */
 ::-webkit-scrollbar {
   /* 滚动条整体样式 */
   width: 8px; /* 高宽分别对应横竖滚动条的尺寸 */
@@ -67,15 +67,19 @@ input {
 }
 
 ::-webkit-scrollbar-thumb {
+  background: rgb(112 111 111 / 0%); /* 设置背景颜色为透明 */
+
   /* 滚动条里面小方块 */
   border-radius: 5px; /* 设置圆角 */
-  background: rgba(112, 111, 111, 0); /* 设置背景颜色为透明 */
 }
+
 :hover::-webkit-scrollbar-thumb {
-  background: rgba(112, 111, 111, 0.3); /* 当鼠标移入时，显示背景颜色 */
+  background: rgb(112 111 111 / 30%); /* 当鼠标移入时，显示背景颜色 */
 }
+
 ::-webkit-scrollbar-track {
+  background: rgb(1 56 99 / 0%); /* 设置背景颜色为透明 */
+
   /* 滚动条里面轨道 */
   border-radius: 5px; /* 设置圆角 */
-  background: rgba(1, 56, 99, 0); /* 设置背景颜色为透明 */
 }

@@ -97,6 +97,7 @@ const resolvePath = (basePath, routePath) => {
 .custom-popper {
   .nest-menu.el-menu-item {
     color: $color-gray;
+
     /* 菜单图标样式 */
     .menu-icon {
       flex-shrink: 0;
@@ -105,14 +106,17 @@ const resolvePath = (basePath, routePath) => {
       margin-right: 16px;
       color: $color-gray;
     }
+
     &.is-active {
       color: $color-blue;
+
       .menu-icon {
         color: $color-blue;
       }
     }
   }
 }
+
 .custom-menu-container {
   /* 菜单图标样式 */
   .menu-icon {
@@ -126,6 +130,7 @@ const resolvePath = (basePath, routePath) => {
   /* 收缩菜单样式 */
   &.no-expand-menu-container {
     width: auto;
+
     .menu-icon {
       margin: 0;
     }
@@ -134,20 +139,25 @@ const resolvePath = (basePath, routePath) => {
 
 .custom-menu-container.el-menu {
   border-right: none;
+
   :deep {
     .el-menu-item {
       padding: 0 18px;
       color: $color-gray;
       background-color: $menuBg;
+
       &:hover {
         background-color: $menuHover !important;
       }
+
       &.is-active {
         color: $color-blue;
+
         .menu-icon {
           color: $color-blue;
         }
       }
+
       .el-menu-tooltip__trigger {
         padding: inherit;
       }
@@ -155,19 +165,24 @@ const resolvePath = (basePath, routePath) => {
 
     .el-sub-menu {
       background-color: $color-dark;
+
       .el-sub-menu__title {
         padding: 0 18px;
         color: $color-gray;
+
         &:hover {
           background-color: $menuHover !important;
         }
       }
+
       .el-submenu__icon-arrow {
         color: #909399;
       }
+
       .nest-menu.el-menu-item {
         padding: 0 45px;
         background-color: $subMenuBg !important;
+
         &:hover {
           background-color: $subMenuHover !important;
         }

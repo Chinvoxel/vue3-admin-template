@@ -33,6 +33,7 @@ const onUpdateAxisPointer = ({ event, chart }) => {
 <style lang="scss" scoped>
 .container {
   @include flex(center);
+
   width: 100%;
   height: 100%;
 

@@ -1,10 +1,12 @@
 {
   "editor.formatOnSave": true, // 保存文件时自动格式化
   "eslint.enable": true,
+  "stylelint.enable": true,
   // 保存时进行的操作
   "editor.codeActionsOnSave": {
     // 每次保存的时候将代码按eslint格式进行修复
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
   },
   "eslint.codeAction.showDocumentation": {
     "enable": true
@@ -17,6 +19,12 @@
     "html",
     "vue",
   ],
+
+   // 关闭编辑器内置样式检查（避免与stylelint冲突）
+   "css.validate": false,
+   "scss.validate": false,
+   // stylelint校验的文件类型
+   "stylelint.validate": ["html","css", "scss", "sass", "postcss", "vue"],
 
   // 开启自动显示建议
   "editor.quickSuggestions": {
@@ -49,13 +57,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "[less]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

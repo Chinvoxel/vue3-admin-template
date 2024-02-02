@@ -107,8 +107,8 @@ const handleSubmit = formEl => {
 <style lang="scss" scoped>
 .wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   overflow-y: auto;
@@ -125,8 +125,8 @@ const handleSubmit = formEl => {
       width: 100%;
       height: 100%;
       padding: 0;
-      background-color: #e0edfd;
       overflow: hidden;
+      background-color: #e0edfd;
     }
 
     .img-login {
@@ -136,8 +136,8 @@ const handleSubmit = formEl => {
     .login-form {
       width: 40%;
       padding: 20px;
-      border-radius: 15px;
       background-color: #ffffff;
+      border-radius: 15px;
 
       .title {
         margin: 40px 0;
@@ -150,21 +150,23 @@ const handleSubmit = formEl => {
 
       .form-input {
         @include autofill(#f5f5f5);
-        border-radius: 6px;
+
         background: #f5f5f5;
+        border-radius: 6px;
 
         :deep(.el-input__wrapper) {
-          padding: 0 8px 0 0;
           height: 36px;
-          border-radius: inherit;
+          padding: 0 8px 0 0;
           background: inherit;
+          border-radius: inherit;
 
           .el-input__prefix-inner {
             .icon {
               @include flex(center);
-              padding: 4px 4px;
-              border-radius: 2px;
+
+              padding: 4px;
               background: #ffffff;
+              border-radius: 2px;
             }
 
             & > :first-child {
@@ -175,8 +177,8 @@ const handleSubmit = formEl => {
           .el-input__inner {
             padding-left: 0;
             background: inherit;
-            box-shadow: none;
             border: none;
+            box-shadow: none;
 
             &::placeholder {
               font-size: 14px;
@@ -186,12 +188,12 @@ const handleSubmit = formEl => {
       }
 
       .btn-group {
-        text-align: right;
         margin-top: 40px;
+        text-align: right;
 
         .btn-submit {
-          height: 36px;
           width: 100%;
+          height: 36px;
         }
       }
     }
