@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  plugins: ['stylelint-order', 'stylelint-scss'],
+  plugins: ['stylelint-scss'],
   extends: [
     'stylelint-config-standard',
     "stylelint-config-recommended-scss",
@@ -11,7 +11,7 @@ module.exports = {
 
   overrides: [
     {
-      files: ['**/*.(scss|css|vue|html)'],
+      files: ['**/*.(scss|css|vue)'],
       customSyntax: 'postcss-scss',
     },
     {
@@ -25,6 +25,7 @@ module.exports = {
    * always => 必须
    */
   rules: {
+    "declaration-empty-line-before": null,
     // 在 css 中使用 v-bind，不报错
     'value-keyword-case': null,
     // 禁止空块

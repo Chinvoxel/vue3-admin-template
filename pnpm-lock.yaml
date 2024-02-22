@@ -130,9 +130,6 @@ devDependencies:
   stylelint-config-standard:
     specifier: ^36.0.0
     version: 36.0.0(stylelint@16.2.1)
-  stylelint-order:
-    specifier: ^6.0.4
-    version: 6.0.4(stylelint@16.2.1)
   stylelint-scss:
     specifier: ^6.1.0
     version: 6.1.0(stylelint@16.2.1)
@@ -5204,14 +5201,6 @@ packages:
       postcss: 7.0.39
     dev: true
 
-  /postcss-sorting@8.0.2(postcss@8.4.33):
-    resolution: {integrity: sha512-M9dkSrmU00t/jK7rF6BZSZauA5MAaBW4i5EnJXspMwt4iqTh/L9j6fgMnbElEOfyRyfLfVbIHj/R52zHzAPe1Q==, tarball: https://registry.npmmirror.com/postcss-sorting/-/postcss-sorting-8.0.2.tgz}
-    peerDependencies:
-      postcss: ^8.4.20
-    dependencies:
-      postcss: 8.4.33
-    dev: true
-
   /postcss-styl@0.12.3:
     resolution: {integrity: sha512-8I7Cd8sxiEITIp32xBK4K/Aj1ukX6vuWnx8oY/oAH35NfQI4OZaY5nd68Yx8HeN5S49uhQ6DL0rNk0ZBu/TaLg==, tarball: https://registry.npmmirror.com/postcss-styl/-/postcss-styl-0.12.3.tgz}
     engines: {node: ^8.10.0 || ^10.13.0 || ^11.10.1 || >=12.13.0}
@@ -6038,16 +6027,6 @@ packages:
       postcss: 7.0.39
       postcss-sorting: 4.1.0
       stylelint: 9.10.1
-    dev: true
-
-  /stylelint-order@6.0.4(stylelint@16.2.1):
-    resolution: {integrity: sha512-0UuKo4+s1hgQ/uAxlYU4h0o0HS4NiQDud0NAUNI0aa8FJdmYHA5ZZTFHiV5FpmE3071e9pZx5j0QpVJW5zOCUA==, tarball: https://registry.npmmirror.com/stylelint-order/-/stylelint-order-6.0.4.tgz}
-    peerDependencies:
-      stylelint: ^14.0.0 || ^15.0.0 || ^16.0.1
-    dependencies:
-      postcss: 8.4.33
-      postcss-sorting: 8.0.2(postcss@8.4.33)
-      stylelint: 16.2.1
     dev: true
 
   /stylelint-scss@6.1.0(stylelint@16.2.1):
