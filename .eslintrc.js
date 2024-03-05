@@ -41,18 +41,6 @@ module.exports = {
    * "error" 或 2  ==>  规则作为一个错误（代码不能执行，界面报错）
    */
   rules: {
-    /* vue */
-    'vue/no-undef-properties': 'error', // 禁止使用未定义的属性
-    'vue/block-tag-newline': 'error', // 在开始和结束块级标记之后和之前强制换行
-    'vue/comment-directive': 'off', // 支持在模版中使用 eslint-disable-next-line 等注释
-    'vue/no-multiple-template-root': 'off', // 关闭多根节点检测
-    'vue/multi-word-component-names': 'off', // 关闭单文件组件名必须多个单词的限制
-    'vue/attribute-hyphenation': 'error', // 自定义组件-属性名称-连接符
-    'vue/attributes-order': 'off',
-
-    /* css */
-    'vue-scoped-css/require-scoped': 'error', // 确保 scoped 样式的正确使用
-
     /* JS */
     'no-console': 'off', // 打印警告
     'no-use-before-define': 'off', // vue项目允许先定义方法后使用
@@ -87,5 +75,21 @@ module.exports = {
         sass: 'always'
       }
     ]
-  }
+  },
+
+  overrides: [
+    {
+      files: ['*.vue'],
+      rules: {
+        'vue/no-undef-properties': 'error', // 禁止使用未定义的属性
+        'vue/block-tag-newline': 'error', // 在开始和结束块级标记之后和之前强制换行
+        'vue/comment-directive': 'off', // 支持在模版中使用 eslint-disable-next-line 等注释
+        'vue/no-multiple-template-root': 'off', // 关闭多根节点检测
+        'vue/multi-word-component-names': 'off', // 关闭单文件组件名必须多个单词的限制
+        'vue/attribute-hyphenation': 'error', // 自定义组件-属性名称-连接符
+        'vue/attributes-order': 'off',
+        'vue-scoped-css/require-scoped': 'error' // 确保 scoped 样式的正确使用
+      }
+    }
+  ]
 }
